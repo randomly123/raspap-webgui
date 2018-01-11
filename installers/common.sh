@@ -1,7 +1,7 @@
 raspap_dir="/etc/raspap"
 raspap_user="www-data"
 version=`sed 's/\..*//' /etc/debian_version`
-
+version_msg="Raspian 9.0 (Stretch)" 
 # Determine version, set default home location for lighttpd and 
 # php package to install 
 webroot_dir="/var/www/html" 

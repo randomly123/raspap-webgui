@@ -5,17 +5,6 @@ version=`sed 's/\..*//' /etc/debian_version`
 # Determine version, set default home location for lighttpd and 
 # php package to install 
 webroot_dir="/var/www/html" 
-if [ $version -eq 9 ]; then 
-    version_msg="Raspian 9.0 (Stretch)" 
-    php_package="php7.0-cgi" 
-elif [ $version -eq 8 ]; then 
-    version_msg="Raspian 8.0 (Jessie)" 
-    php_package="php5-cgi" 
-else 
-    version_msg="Raspian earlier than 8.0 (Wheezy)"
-    webroot_dir="/var/www" 
-    php_package="php5-cgi" 
-fi 
 
 # Outputs a RaspAP Install log line
 function install_log() {
